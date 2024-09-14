@@ -1,0 +1,86 @@
+/* =================== 全局颜色和主题设置 =================== */
+
+/** 主题颜色 - 绿色 */
+:root {
+  --vp-c-brand-1: #4CAF50; /* 主绿色 */
+  --vp-c-brand-2: #66BB6A; /* 次绿色 */
+  --vp-c-brand-3: #81C784; /* 辅助绿色 */
+  --vp-c-brand-soft: hsl(122, 58%, 72%); /* 柔和的绿色背景 */
+  
+  /** 背景颜色 */
+  --vp-c-bg: #ffffff; /* 页面背景 */
+  --vp-c-bg-alt: #f0f0f0; /* 备选背景 */
+  --vp-c-bg-elv: #ffffff; /* 提升元素背景 */
+  --vp-c-bg-soft: #f0f0f0; /* 柔和背景 */
+  
+  /** 文本颜色 */
+  --vp-c-text-1: rgba(60, 60, 67); /* 主要文本颜色 */
+  --vp-c-text-2: rgba(60, 60, 67, 0.78); /* 辅助文本颜色 */
+  --vp-c-text-3: rgba(60, 60, 67, 0.56); /* 轻度文本颜色 */
+}
+
+/** 深色模式 */
+.dark {
+  --vp-c-brand-1: #81C784; /* 主绿色 */
+  --vp-c-brand-2: #66BB6A; /* 次绿色 */
+  --vp-c-brand-3: #4CAF50; /* 辅助绿色 */
+  --vp-c-brand-soft: hsl(122, 58%, 72%); /* 柔和的绿色背景 */
+  
+  /** 背景颜色 */
+  --vp-c-bg: #1b1b1f; /* 深色背景 */
+  --vp-c-bg-alt: #161618; /* 备选深色背景 */
+  --vp-c-bg-elv: #202127; /* 提升深色背景 */
+  --vp-c-bg-soft: #202127; /* 柔和深色背景 */
+  
+  /** 文本颜色 */
+  --vp-c-text-1: rgba(255, 255, 255, 0.86); /* 主要文本颜色 */
+  --vp-c-text-2: #ececf899; /* 辅助文本颜色 */
+  --vp-c-text-3: hwb(240 89% 4%); /* 轻度文本颜色 */
+}
+
+/* =================== 字体设置 =================== */
+
+/* 设置字体 */
+$font-family: 'LXGW Wenkai', sans-serif;
+$font-family-mono: 'LXGW WenKai Mono', monospace;
+
+/* 设置全局字体 */
+body, h1, h2, h3, h4, h5, h6, p, span, div, a, ul, ol, li, table, th, td, pre, code, kbd, samp {
+  font-family: $font-family;
+}
+
+/* 设置标题的字体和粗细 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* 字体 face 设置 */
+@font-face {
+  font-family: 'LXGW Wenkai';
+  src: url('/fonts/LXGWWenKaiTC-Bold.woff2') format('woff2'); /* 确保文件格式与实际文件匹配 */
+}
+
+@font-face {
+  font-family: 'LXGW WenKai Mono';
+  src: url('/fonts/LXGWWenKaiTC-Bold.woff2') format('woff2'); /* 确保文件格式与实际文件匹配 */
+}
+
+/* =================== 代码块样式 =================== */
+
+/* 设置代码的字体及颜色 */
+code, pre, kbd, samp {
+  font-family: $font-family-mono;
+  // color: var(--vp-c-brand-1); /* 代码字体颜色为主绿色 */
+  // background-color: var(--vp-c-bg-soft); /* 代码块背景为柔和背景 */
+  padding: 0.5em; /* 内边距 */
+  border-radius: 5px; /* 圆角 */
+  font-size: 0.8em; /* 调整字体大小 */
+  font-weight: bold;
+  white-space: pre-wrap; /* 自动换行 */
+}
+
+/* 深色模式下的代码块样式 */
+.dark code, .dark pre, .dark kbd, .dark samp {
+  color: var(--vp-c-brand-3); /* 辅助绿色 */
+  // background-color: var(--vp-c-bg-alt); /* 深色背景的代码块 */
+}
